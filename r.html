@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+  
+<head> 
+    <!-- using jquery library -->
+    <script 
+        src="https://code.jquery.com/jquery-git.js"> 
+    </script>     
+</head> 
+  
+<body> 
+    <h1 style="color: green;"> 
+      Geeksforgeeks 
+    </h1> 
+  
+    <!-- Creating a button -->
+    <div class="redirect"> 
+        <button>Redirect me to GFG</button> 
+    </div> 
+  
+    <!-- Script which will redirect  
+         us to another page    -->
+    <script> 
+        // click event on button 
+        $("button").click(function(){ 
+            $(".redirect").text("Redirecting....") 
+  
+            // storing url and time 
+            let delay = 5000; 
+            let url = "https://www.geeksforgeeks.org/"; 
+            setTimeout(function(){ 
+                location = url; 
+            },5000) 
+        }) 
+    </script> 
+</body> 
+  
+</html>
