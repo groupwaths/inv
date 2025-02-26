@@ -1,32 +1,19 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-  
-<head> 
-    <!-- using jquery library -->
-    <script 
-        src="https://code.jquery.com/jquery-git.js"> 
-    </script>     
-</head> 
-  
-<body> 
-    <h1 style="color: green;"> 
-      Geeksforgeeks 
-    </h1>   
-    <!-- Script which will redirect  
-         us to another page    -->
-    <script> 
-        // click event on button 
-        $("button").click(function(){ 
-            $(".redirect").text("Redirecting....") 
-  
-            // storing url and time 
-            let delay = 5000; 
-            let url = "https://www.geeksforgeeks.org/"; 
-            setTimeout(function(){ 
-                location = url; 
-            },5000) 
-        }) 
-    </script> 
-</body> 
-  
+<!DOCTYPE html>
+<html>
+<body>
+   <h2>Using JavaScript to resirect a webpage after 5 seconds </h2>
+   <p id = "google.com"></p>
+   <button onclick = "redirect()">Click to Redirect to Tutorials Point</button>
+   <script>
+      function redirect () {
+         setTimeout(myURL, 5000);
+         var result = document.getElementById("google.com");
+         result.innerHTML = "<b> The page will redirect after delay of 5 seconds";
+      }
+
+      function myURL() {
+         document.location.href = 'https://www.tutorialspoint.com/index.htm';
+      }
+   </script>
+</body>
 </html>
